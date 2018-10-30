@@ -13,7 +13,7 @@ client.on('ready', () => {
     client.user.setStatus('idle') // Can be 'online', 'idle', 'dnd', or 'invisible'
     setInterval(function() 
     {
-        let statuses = ['Justice' + gamery, 'luckily' + gamery, 'Made with Love' + gamery, 'Rozi Vector#9416' + gamery, 'Serve you' + gamery, 'Sniper' + gamery, 'Love Rabbit' + gamery, 'Cool Stuff' + gamery, 'Ghost Hunt' + gamery, `in ${client.guilds.size} servers`+ gamery];
+        let statuses = ['Justice' + gamery, 'luckily' + gamery, 'Made with Love' + gamery, 'Rozi Vector#9416' + gamery, 'Serve you' + gamery, 'Sniper' + gamery, 'Love Rabbit' + gamery, 'Cool Stuff' + gamery, '24/7 Support' + gamery, `in ${client.guilds.size} servers`+ gamery];
         let status = statuses[Math.floor(Math.random()*statuses.length)];
         client.user.setPresence({
             game: {
