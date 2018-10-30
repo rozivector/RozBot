@@ -129,7 +129,7 @@ client.on('message', function(message){
                         .addField('<:YouTube:506769226766483457> My Channel', `[Click here](${'https://www.youtube.com/user/rozivector1999'})`, true)
                         .addField('<:twitch:506770621498392594> My Streaming', `[Click here](${'https://www.twitch.tv/rozivector'})`, true)
                         .addField(':earth_asia: My Website', `[Click here](${'http://rozivector.blogspot.com'})`, true)
-                        .setFooter("We will working 24/7 online bot soon! Made with discord.js")
+                        .setFooter("Now support 24/7 online bot! Made with discord.js")
                         message.channel.sendMessage(embed)
                         message.channel.stopTyping(true);
                     };
