@@ -1,7 +1,6 @@
 const Discord = require('discord.js'); // Importing discord.js & require method
 
 const client = new Discord.Client();
-const TOKEN = 'NDgxMzA1NTE1MDkyMjEzNzYz.Dl06Ug.SJh6M6MSi1OhauqkRKmSs0oVFl0';
 const prefix = 'r!';
 const printahs = '<@481305515092213763> ';
 
@@ -436,4 +435,4 @@ client.on('ready',function(){
     console.log("RozBot is Ready, My Boss!");
 });
 
-client.login(TOKEN);
+client.login(process.env.BOT_TOKEN);
