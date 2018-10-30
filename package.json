@@ -1,0 +1,16 @@
+{
+  "name": "rozbot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "author": "Rozi Vector",
+  "license": "ISC",
+  "description": "Moderative and user-friendly discord bot",
+  "dependencies": {
+    "discord.js": "^11.4.2",
+    "flip-text": "^1.1.0"
+  },
+  "devDependencies": {}
+}
