@@ -2,19 +2,11 @@ const {RichEmbed} = require('discord.js');
 exports.run = (client, message) => {
 
     message.channel.startTyping();
-	let start = Date.now(); 
-	message.channel.sendMessage(':hourglass_flowing_sand: ').then(message => { 
-   	 let diff = (Date.now() - start); 
-   	 let API = (client.ping).toFixed(2)
-        
-        let embed = new Discord.RichEmbed()
-        .setColor("RANDOM")
-        .addField("Pong!", `\`${diff}ms\``, true)
-        .addField("Response to API", `\`${API}ms\``, true)
-        message.edit(embed);
-      
-    });
-  }
+	const embed = new RichEmbed()
+        .addField( "Pong!" ,"Time of response " + `${client.pings[0]} ms ` + "\nYour time response to bot "+ `${Date.now() - start} ms`)
+	.setColor('#FAFF00');
+    message.channel.sendMessage(":hourglass_flowing_sand:")
+    .then(message => {message.edit({ embed })});
     message.channel.stopTyping();
     
 
