@@ -9,4 +9,5 @@ exports.run = (client, message) => {
     .then(message => {message.edit({ embed })});
     message.channel.stopTyping();
     
+
 }
