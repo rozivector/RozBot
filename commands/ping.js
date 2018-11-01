@@ -7,7 +7,6 @@ exports.run = (client, message) => {
 	.setColor('#FAFF00');
     message.channel.sendMessage(":hourglass_flowing_sand:")
     .then(message => {message.edit({ embed })});
-    message.channel.stopTyping();
-    
+    message.channel.stopTyping();  
 
 }
