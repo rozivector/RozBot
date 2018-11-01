@@ -9,7 +9,7 @@ exports.run = (client, message) => {
         
         let embed = new Discord.RichEmbed()
         .setColor("RANDOM")
-        .addField("Pong!", "Your response to bot" + `\`${diff}ms\``, true)
+        .addField("Pong!", `\`${diff}ms\``, true)
         .addField("Response to API", `\`${API}ms\``, true)
         message.edit(embed);
       
