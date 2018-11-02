@@ -27,7 +27,7 @@ client.on('ready', () => {
             type: 0 // type of presence: 0 for playing game, 1 for live on twitch, 2 for listening to, 3 for watching
             }
             ,});
-    }, 15000)
+    }, 7000)
 
 });
 
