@@ -392,7 +392,7 @@ client.on('message', function(message){
                         let desc = dar.join(" ");
                         if (!link) 
                         return message.channel.send("**[Error]** Type the valid URL following the command!");
-                        message.channel.stopTyping();
+                        return message.channel.stopTyping();
                         if (!desc)
                         desc = "Link:";
                         let user = message.author;
