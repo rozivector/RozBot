@@ -388,6 +388,7 @@ client.on('message', function(message){
                     let dar = message.content.split(" ").slice(2);
                     if(somok == 'link'){
                         message.channel.startTyping();
+                        message.channel.stopTyping();
                         let link = dem[0];
                         let desc = dar.join(" ");
                         if (!link)
