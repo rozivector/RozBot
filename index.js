@@ -370,6 +370,7 @@ client.on('message', function(message){
                         let metry = spawn.join(' ');
                         if (!metry) 
                         return message.channel.send("**[Error]** Enter your characteristic following the command!");
+                        message.channel.stopTyping();
                         let embed = new Discord.RichEmbed()
                         .setDescription(":arrow_forward: " + metry + ": " + mat +"." + met + "%")
                         .setColor('#FFD800')
