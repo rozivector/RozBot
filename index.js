@@ -390,8 +390,6 @@ client.on('message', function(message){
                         message.channel.startTyping();
                         let link = dem[0];
                         let desc = dar.join(" ");
-                        if (!link) 
-                        return message.channel.send("**[Error]** Type the valid URL following the command!");
                         if (!desc)
                         desc = "Link:";
                         let user = message.author;
@@ -404,6 +402,10 @@ client.on('message', function(message){
                         .setTimestamp();
                         message.channel.send(embed)
                         message.channel.stopTyping(true);
+                        if (!link) 
+                        message.channel.stopTyping(true);
+                        message.channel.send("**[Error]** Type the valid URL following the command!");
+                        
                     };
 
                 };
