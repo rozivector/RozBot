@@ -390,10 +390,10 @@ client.on('message', function(message){
                         message.channel.startTyping();
                         let link = dem[0];
                         let desc = dar.join(" ");
-                        if (!link && !desc){
+                        if (!link && !desc)
                         message.channel.stopTyping(true);
-                        message.channel.send("**[Error]** Type the valid URL following the command!");}
-                        else if (!desc)
+                        return message.channel.send("**[Error]** Type the valid URL following the command!");
+                        if (!desc)
                         desc = "Link:";
                         let user = message.author;
                         message.delete();
