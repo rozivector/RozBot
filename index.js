@@ -392,7 +392,6 @@ client.on('message', function(message){
                         let desc = dar.join(" ");
                         if (!link) 
                         return message.channel.send("**[Error]** Type the valid URL following the command!");
-                        return message.channel.stopTyping();
                         if (!desc)
                         desc = "Link:";
                         let user = message.author;
@@ -404,7 +403,7 @@ client.on('message', function(message){
                         .setFooter(`${user.username}#${user.discriminator}`, user.displayAvatarURL)
                         .setTimestamp();
                         message.channel.send(embed)
-                        message.channel.stopTyping();
+                        message.channel.stopTyping(true);
                     };
 
                 };
