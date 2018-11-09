@@ -184,6 +184,24 @@ client.on('message', function(message){
                     '4' : 'Very High'
 
                 }
+                
+                const servico =
+                {
+                    'singapore' : ':flag_sg: Singapore',
+                    'brazil' : ':flag_br: Brazil',
+                    'eu-central' : ':flag_eu: Central Europe',
+                    'hongkong' : ':flag_hk: Hong Kong',
+                    'japan' : ':flag_jp: Japan',
+                    'russia' : ':flag_ru: Russia',
+                    'southafrica' : ':flag_za: South Africa',
+                    'sydney' : ':flag_au: Sydney, Australia',
+                    'us-central' : ':flag_us: US Central',
+                    'us-east' : ':flag_us: US East',
+                    'us-south' : ':flag_us: US South',
+                    'us-west' : ':flag_us: US West',
+                    'eu-west' : ':flag_eu: Western Europe'
+                }
+                
                 if(message.content == prefix+'userinfo') 
                 {
                     message.channel.startTyping();
@@ -218,7 +236,7 @@ client.on('message', function(message){
                     .addField('Server Name: ', message.guild.name, true)
                     .addField('Server ID: ', message.guild.id, true)
                     .addField('Server Owner: ', `${message.guild.owner.user.username}#${message.guild.owner.user.discriminator}`, true)
-                    .addField('Server Region: ', `${message.guild.region}`, true)
+                    .addField('Server Region: ', servico[`${message.guild.region}`], true)
                     .addField('Members: ', `${message.guild.members.filter(mb => mb.user.bot === false).size} users & ${message.guild.members.filter(mb => mb.user.bot === true).size} bots`, true)
                     .addField('Channels: ', `${message.guild.channels.findAll("type", "text").length} text & ${message.guild.channels.findAll("type", "voice").length} voice`, true)
                     .addField('Server Roles: ', `${message.guild.roles.size}`, true)
