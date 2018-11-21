@@ -128,7 +128,7 @@ client.on('message', function(message){
                         .addField(':pencil: Contact us', `[Click here](${'https://goo.gl/forms/0km4ybWuVWLQ83T33'})`, true)
                         .addField('<:YouTube:506769226766483457> My Channel', `[Click here](${'https://www.youtube.com/user/rozivector1999'})`, true)
                         .addField('<:twitch:506770621498392594> My Streaming', `[Click here](${'https://www.twitch.tv/rozivector'})`, true)
-                        .addField(':earth_asia: My Website', `[Click here](${'http://rozivector.blogspot.com'})`, true)
+                        .addField('<:GitHub:514935374037123093> My GitHub', `[Click here](${'https://github.com/rozivector'})`, true)
                         .setFooter("Now support 24/7 online bot! Made with discord.js")
                         message.channel.sendMessage(embed)
                         message.channel.stopTyping(true);
