@@ -1,6 +1,6 @@
 const Discord = require('discord.js'); // Importing discord.js & require method
 
-const client = new Discord.Client();
+const client = new Discord.Client({disableEveryone: true});
 const prefix = 'r!';
 const printahs = '<@481305515092213763> ';
 
