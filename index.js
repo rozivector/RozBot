@@ -235,6 +235,7 @@ client.on('message', function(message){
                 if(message.content == prefix + 'serverinfo')
                 {
                     message.channel.startTyping();
+                    var membcount = message.guild.members.filter(mb => mb.user.bot === false).size + message.guild.members.filter(mb => mb.user.bot === true).size;
                     let embed = new Discord.RichEmbed()
                     .setAuthor(`${message.guild.name}`, `${message.guild.iconURL ? message.guild.iconURL : ""}`)
                     .setDescription('Here is the server information: ')
@@ -243,7 +244,7 @@ client.on('message', function(message){
                     .addField('Server ID: ', message.guild.id, true)
                     .addField('Server Owner: ', `${message.guild.owner.user.username}#${message.guild.owner.user.discriminator}`, true)
                     .addField('Server Region: ', servico[`${message.guild.region}`], true)
-                    .addField('Members: ', `${message.guild.members.filter(mb => mb.user.bot === false).size} users & ${message.guild.members.filter(mb => mb.user.bot === true).size} bots`, true)
+                    .addField(`Members (${membcount}): `, `${message.guild.members.filter(mb => mb.user.bot === false).size} users & ${message.guild.members.filter(mb => mb.user.bot === true).size} bots`, true)
                     .addField('Channels: ', `${message.guild.channels.findAll("type", "text").length} text & ${message.guild.channels.findAll("type", "voice").length} voice`, true)
                     .addField('Server Roles: ', `${message.guild.roles.size}`, true)
                     .addField('Server Emojis: ', `${message.guild.emojis.size}`, true)
