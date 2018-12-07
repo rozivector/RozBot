@@ -242,7 +242,7 @@ client.on('message', function(message){
                     .setThumbnail(`${message.guild.iconURL ? message.guild.iconURL : ""}`)
                     .addField('Server Name: ', message.guild.name, true)
                     .addField('Server ID: ', message.guild.id, true)
-                    .addField('Server Owner: ', `${message.guild.owner.user.username}#${message.guild.owner.user.discriminator}`, true)
+                    .addField('Server Owner: ', `${message.guild.owner.user.username}#${message.guild.owner.user.discriminator}\n<@${message.guild.ownerID}>`, true)
                     .addField('Server Region: ', servico[`${message.guild.region}`], true)
                     .addField(`Members (${membcount}): `, `${message.guild.members.filter(mb => mb.user.bot === false).size} users & ${message.guild.members.filter(mb => mb.user.bot === true).size} bots`, true)
                     .addField('Channels: ', `${message.guild.channels.findAll("type", "text").length} text & ${message.guild.channels.findAll("type", "voice").length} voice`, true)
